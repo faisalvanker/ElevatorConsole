@@ -13,6 +13,15 @@ namespace Elevator.Business.ElevatorRules
 
         public static bool Validate(string selection, out ElevatorFloor floorSelection)
         {
+            floorSelection = default;
+          
+            var validSelection = new List<string> { "ground", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+
+            if (!validSelection.Contains(selection.Trim().ToLowerInvariant()))
+            {
+                return false;
+            }
+
             return Enum.TryParse(selection, true, out floorSelection);
 
         }

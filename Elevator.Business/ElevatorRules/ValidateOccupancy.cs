@@ -1,4 +1,5 @@
 ﻿using Elevator.Dto;
+using Elevator.Lookup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,9 @@ namespace Elevator.Business.ElevatorRules
 
         public static bool Validate(string selection, out int occupantCount)
         {
-            return int.TryParse(selection, out occupantCount);
+            var result = int.TryParse(selection, out occupantCount);
+
+            return result && occupantCount <= Config.MaximumOccupancyOfLifts;
         }
     }
 }

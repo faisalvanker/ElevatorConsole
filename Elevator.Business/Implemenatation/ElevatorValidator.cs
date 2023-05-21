@@ -28,7 +28,7 @@ namespace Elevator.Business
             else
             {
                 validationDto.Status = Validation.Invalid;
-                validationDto.Description = "Invalid Selection Provided";
+                validationDto.Description = $"Invalid Selection Floor {currentFloor} Destination {destinationFloor} Occupants {occupants}";
             }
 
             return validationDto;

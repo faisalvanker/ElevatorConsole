@@ -9,6 +9,7 @@ namespace Elevator.Lookup
     public class Config
     {
         public const int MaximumOccupancyOfLifts = 10;
+        public const int MaximumFloors = 10;
 
     }
 }
