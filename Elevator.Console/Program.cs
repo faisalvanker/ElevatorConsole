@@ -22,8 +22,6 @@ namespace Elevator.ConsoleApp
                 DisplayElevatorStatus(validSelection);
             }
 
-            DisplayElevatorStatus();
-
             Console.ReadLine();
         }
 
@@ -85,7 +83,7 @@ namespace Elevator.ConsoleApp
             if (result.Status == Validation.Success)
                 Console.WriteLine($"You have are on {current} floor(s), going to {destination} floor and have {occupants} person(s)");
             else
-                Console.WriteLine($"Invalid Selection {result.Description}");
+                Console.WriteLine($"Error {result.Description}");
 
             return result;
         }
