@@ -20,6 +20,7 @@ namespace Elevator.ConsoleApp
             if (validSelection.Status == Validation.Success)
             {
                 DisplayElevatorStatus(validSelection);
+                DisplayAllElevatorStatus();
             }
 
             Console.ReadLine();
@@ -59,7 +60,7 @@ namespace Elevator.ConsoleApp
             return ValidateElevatorSelection(current, destination, occupants);
         }
 
-        private static void DisplayElevatorStatus()
+        private static void DisplayAllElevatorStatus()
         {
             var elevatorStatuses = manager.ElevatorStatus();
 
